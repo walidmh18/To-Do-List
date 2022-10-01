@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="main.js" defer></script>
+
+</head>
+<body>
+  <div class="container">
+    <h1>To Do List</h1>
+    <div class="filters">
+      <div class="filter active showAll" onclick="showAll(this)">All</div>
+      <div class="filter showActive" onclick="showActive(this)">Active</div>
+      <div class="filter showCompleted" onclick="showCompleted(this)">Completed</div>
+    </div>
+    <div class="createNewForm">
+      <input type="text" placeholder="ex: Do Coding" id="addNewinput" min="3" required>
+      <button onclick="addNew()" id="addNewBtn">Add</button>
+    </div>
+    <div class="toDoList">
+
+
+
+
+      <div class="toDoEl" data-statu="active">
+        <div class="toDoElName">
+          <p class="name">do coding</p>
+          <span class="statu">(active)</span>
+
+        </div>
+        <div class="actions">
+          <button class="completeBtn" onclick="completeEl(this.parentElement.parentElement)"><i class="fa-solid fa-check"></i></button>
+          <button class="updateBtn" onclick="updateEl(this.parentElement.parentElement)"><i class="fa-solid fa-pen-to-square"></i></button>
+          <button class="deleteBtn" onclick="deleteEl(this.parentElement.parentElement)"><i class="fa-solid fa-x"></i></button>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="toDoEl" data-statu="completed">
+        <div class="toDoElName">
+          <p class="name">do coding</p>
+          <span class="statu">(completed)</span>
+
+        </div>
+        <div class="actions">
+        
+          <button class="deleteBtn"><i class="fa-solid fa-x"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
