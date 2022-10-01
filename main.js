@@ -283,19 +283,7 @@ filters.forEach(filter =>{
     
     document.querySelector('head').appendChild(filtersAfterEl)
 
-    let VisibleEls = 0
-    todoElements.forEach(el =>{
-        if(el.style.display == 'flex'){
-            VisibleEls ++
-        }
-        if (VisibleEls == 0) {
-            toDoList.innerHTML = `
-                <h2 class="errorMsgEmpty">Nothing is here. <br> Try Adding new tasks, or Make Actions on existing ones.</h2>
-            `
-        } else{
-            loadTasks()
-        }
-    })
+    
 })
 })
 
