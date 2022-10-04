@@ -23,7 +23,10 @@ window.onload = () => {
 
 
 
-
+addEventListener('keypress' , e=>{
+    if(e.key === 'Enter' && addNewInp === document.activeElement){
+            addNew()
+}})
 
 
 
